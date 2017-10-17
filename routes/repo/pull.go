@@ -597,9 +597,9 @@ func CompareAndPullRequest(c *context.Context) {
 	c.Data["RequireHighlightJS"] = true
 	setTemplateIfExists(c, PULL_REQUEST_TEMPLATE_KEY, PullRequestTemplateCandidates)
 	renderAttachmentSettings(c)
-
 	headUser, headRepo, headGitRepo, prInfo, baseBranch, headBranch := ParseCompareInfo(c)
 	if c.Written() {
+		log.Info("%s...............","xxxxxxxxxxxxxxxxxxxx")
 		return
 	}
 

@@ -401,7 +401,6 @@ func NewContext() {
 	if err != nil {
 		log.Fatal(2, "Fail to get work directory: %v", err)
 	}
-
 	Cfg, err = ini.Load(bindata.MustAsset("conf/app.ini"))
 	if err != nil {
 		log.Fatal(2, "Fail to parse 'conf/app.ini': %v", err)

@@ -297,6 +297,7 @@ func SignUpPost(c *context.Context, cpt *captcha.Captcha, f form.Register) {
 		IsActive: !setting.Service.RegisterEmailConfirm,
 	}
 	if err := models.CreateUser(u); err != nil {
+			fmt.Println(err)
 		switch {
 		case models.IsErrUserAlreadyExist(err):
 			c.Data["Err_UserName"] = true
