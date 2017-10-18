@@ -599,7 +599,8 @@ func CompareAndPullRequest(c *context.Context) {
 	renderAttachmentSettings(c)
 	headUser, headRepo, headGitRepo, prInfo, baseBranch, headBranch := ParseCompareInfo(c)
 	if c.Written() {
-		log.Info("%s...............","xxxxxxxxxxxxxxxxxxxx")
+		//log.Info("%s............... ","xxxxxxxxxxxxxxxxxxxx")
+		//log.Info("%V",c.Status)
 		return
 	}
 

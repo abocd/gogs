@@ -78,6 +78,7 @@ func (rw *responseWriter) Size() int {
 }
 
 func (rw *responseWriter) Written() bool {
+	//fmt.Println(rw,rw.Header(),"---------------")
 	return rw.status != 0
 }
 

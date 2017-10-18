@@ -401,6 +401,7 @@ func NewContext() {
 	if err != nil {
 		log.Fatal(2, "Fail to get work directory: %v", err)
 	}
+	//log.Info("%s",bindata.MustAsset("conf/app.ini"))
 	Cfg, err = ini.Load(bindata.MustAsset("conf/app.ini"))
 	if err != nil {
 		log.Fatal(2, "Fail to parse 'conf/app.ini': %v", err)
@@ -414,7 +415,7 @@ func NewContext() {
 	if len(CustomConf) == 0 {
 		CustomConf = CustomPath + "/conf/app.ini"
 	}
-
+//log.Info(CustomConf)
 	if com.IsFile(CustomConf) {
 		if err = Cfg.Append(CustomConf); err != nil {
 			log.Fatal(2, "Fail to load custom conf '%s': %v", CustomConf, err)
